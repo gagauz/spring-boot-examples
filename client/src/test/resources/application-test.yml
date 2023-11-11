@@ -1,0 +1,21 @@
+server: 
+  port: 9999
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  jwt:
+    issuer: localhost
+    key_algoritm: RSA
+    private_key: keys/private_key_1.PKCS8
+    public_key: keys/public_key_1.X509
+logging:
+  level:
+    root: INFO
+    org.springframework.security: TRACE
